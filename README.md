@@ -43,7 +43,8 @@ $result = $mailer->send($message);
 
 ## Note
 
-Swift Mailer have been deprecated, use this extension if you're stuck with a legacy app
+> **Note**
+> Swift Mailer is deprecated, use this extension if you're stuck with a legacy app.
 
 ## See also
 - [Ethereal](https://ethereal.email/)
