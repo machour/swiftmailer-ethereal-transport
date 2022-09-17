@@ -11,7 +11,7 @@ class EtherealTransport extends \Swift_SmtpTransport
 {
     public const EVENT_TRANSPORT_DONE = 'transportDone';
 
-    public ?Closure $callback = null;
+    private ?Closure $callback = null;
 
     public function __construct($host = 'smtp.ethereal.email', $port = 587, $encryption = 'tls')
     {
@@ -27,5 +27,10 @@ class EtherealTransport extends \Swift_SmtpTransport
         }
 
         return $response;
+    }
+
+    public function setCallback(Closure $callback)
+    {
+        $this->callback = $callback;
     }
 }
