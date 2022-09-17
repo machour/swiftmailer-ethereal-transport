@@ -1,0 +1,25 @@
+{
+    "name": "machour/swiftmailer-ethereal-transport",
+    "type": "library",
+    "description": "A simple Ethereal transport for Swift Mailer",
+    "keywords": [
+        "ethereal",
+        "swiftmailer",
+        "transport"
+    ],
+    "homepage": "https://github.com/machour/swiftmailer-ethereal-transport",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/machour/swiftmailer-ethereal-transport/issues?state=open",
+        "source": "https://github.com/machour/swiftmailer-ethereal-transport"
+    },
+    "require": {
+        "php": "^8.0|^8.1",
+	"swiftmailer/swiftmailer": "^5.1 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Machour\\SwiftMailerEtherealTransport\\": "src"
+        }
+    }
+}
