@@ -19,9 +19,13 @@ use Machour\SwiftMailerEtherealTransport\EtherealTransport;
 
 // Create the Transport
 $transport = (new EtherealTransport())
+  // Get your credential at https://ethereal.email/create
   ->setUsername('your username')
   ->setPassword('your password')
-  ->setCallback(fn(string $url) => $logger->debug("Email sent to Ethereal, see it at $url"));
+  // Display the URL in your logs, store it session, or whatever ..
+  ->setCallback(function (string $url) use ($logger) {
+      $logger->debug("Email sent to Ethereal, see it at $url");
+  });
 
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
